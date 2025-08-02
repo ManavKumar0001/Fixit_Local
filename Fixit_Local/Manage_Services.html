@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Services - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to top right, #0e0e0e, #1a1a1a);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(20, 20, 20, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #00ffcc;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      color: #00ffcc;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      background: #00ffcc;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #00e6b8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .top-bar input {
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid #00ffcc;
+    }
+
+    .top-bar button {
+      padding: 0.6rem 1.2rem;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .top-bar button:hover {
+      background: #00e6b8;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid #00ffcc;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    th {
+      background: rgba(0, 255, 204, 0.1);
+      color: #00ffcc;
+    }
+
+    tr:hover {
+      background-color: rgba(255,255,255,0.05);
+    }
+
+    .action-btn {
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .edit {
+      background: #80ffdb;
+      color: #000;
+    }
+
+    .edit:hover {
+      background: #64dfdf;
+    }
+
+    .delete {
+      background: #ff4d6d;
+      color: #fff;
+    }
+
+    .delete:hover {
+      background: #ff1e56;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px solid #00ffcc;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Manage Services</h1>
+    <nav>
+      <a href="admin-dashboard.html">← Back to Dashboard</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <div class="top-bar">
+      <input type="text" placeholder="Search services...">
+      <button>Add New Service</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service Name</th>
+          <th>Category</th>
+          <th>Base Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Laptop Repair</td>
+          <td>PC Repair</td>
+          <td>₹999</td>
+          <td>
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Website Design</td>
+          <td>Web Development</td>
+          <td>₹5,000</td>
+          <td>
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    © 2025 FixIt Local · Service Management Panel
+  </footer>
+
+</body>
+</html>

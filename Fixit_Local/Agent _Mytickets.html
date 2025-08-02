@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tickets - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0a0f14, #121921);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(20, 30, 40, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 12px #00ffaa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00ffaa;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #00ffaa;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 170, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #00ffaa;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 1rem;
+      border: 1px solid #00ffaa;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(0, 255, 170, 0.1);
+      color: #00ffaa;
+    }
+
+    td {
+      color: #ddd;
+    }
+
+    .status-open {
+      color: #ff5555;
+      font-weight: bold;
+    }
+
+    .status-resolved {
+      color: #00ff88;
+      font-weight: bold;
+    }
+
+    .btn {
+      background-color: #00ffaa;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00e699;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #00ffaa;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FixIt Local - My Tickets</h1>
+    <a href="agent-dashboard.html" style="text-decoration: none;">
+      <button class="btn">← Back to Dashboard</button>
+    </a>
+  </header>
+
+  <div class="container">
+    <h2>Assigned Tickets</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>User Name</th>
+          <th>Issue</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#101</td>
+          <td>Riya Mehta</td>
+          <td>PC not turning on</td>
+          <td class="status-open">Open</td>
+          <td><button class="btn">View</button></td>
+        </tr>
+        <tr>
+          <td>#102</td>
+          <td>Sameer Khan</td>
+          <td>Website bug report</td>
+          <td class="status-resolved">Resolved</td>
+          <td><button class="btn">View</button></td>
+        </tr>
+        <tr>
+          <td>#103</td>
+          <td>Anjali Roy</td>
+          <td>Internet setup help</td>
+          <td class="status-open">Open</td>
+          <td><button class="btn">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    © 2025 FixIt Local · Agent Ticket Panel
+  </footer>
+</body>
+</html>

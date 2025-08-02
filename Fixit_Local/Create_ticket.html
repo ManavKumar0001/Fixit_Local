@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Ticket - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0b0f1a, #090b14);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(20, 20, 35, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px #b76df0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #b76df0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #b76df0;
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 25px rgba(183, 109, 240, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #b76df0;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid #b76df0;
+      color: #fff;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #fff;
+      box-shadow: 0 0 8px #b76df0;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      background: #b76df0;
+      color: #0b0f1a;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      display: block;
+      margin: 1rem auto 0;
+      box-shadow: 0 0 15px #b76df0;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #a04de2;
+      box-shadow: 0 0 25px #b76df0;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #b76df0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Create Support Ticket</h1>
+  </header>
+
+  <section class="container">
+    <h2>New Ticket Form</h2>
+    <form>
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="Enter ticket subject" required />
+
+      <label for="description">Description</label>
+      <textarea id="description" placeholder="Describe your issue..." required></textarea>
+
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option value="">Select a category</option>
+        <option>Login Issue</option>
+        <option>Website Bug</option>
+        <option>Payment Problem</option>
+        <option>Service Request</option>
+      </select>
+
+      <button type="button" class="submit-btn" onclick="window.location.href='Quickdesk_UserDashboard.html'">
+  Submit Ticket
+</button>
+
+
+</form>
+  </section>
+
+  <footer>
+    © 2025 FixIt Local · Need Help? Raise a Ticket
+  </footer>
+</body>
+</html>

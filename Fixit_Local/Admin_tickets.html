@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - All Tickets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0d0d0d, #1a1a2e);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(35, 40, 55, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 12px #9f70ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #9f70ff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #9f70ff;
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(159, 112, 255, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #9f70ff;
+    }
+
+    .filters {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    select {
+      padding: 0.6rem;
+      background: #2a2a3d;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.9rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.06);
+      color: #bbb;
+    }
+
+    td {
+      color: #eee;
+    }
+
+    .btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .assign-btn {
+      background-color: #61dafb;
+      color: #000;
+    }
+
+    .assign-btn:hover {
+      background-color: #48bde0;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #9f70ff;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FixIt Local Admin</h1>
+  </header>
+
+  <section class="container">
+    <h2>All Tickets</h2>
+
+    <div class="filters">
+      <select>
+        <option>Category: All</option>
+        <option>PC Repair</option>
+        <option>Software Support</option>
+        <option>Web Development</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User</th>
+          <th>Subject</th>
+          <th>Status</th>
+          <th>Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#0012</td>
+          <td>Aryan Singh</td>
+          <td>Wi-Fi not connecting</td>
+          <td>Open</td>
+          <td>Networking</td>
+          <td>
+            <button class="btn assign-btn">Assign Agent</button>
+          </td>
+        </tr>
+        <tr>
+          <td>#0013</td>
+          <td>Kriti Verma</td>
+          <td>Website crashing</td>
+          <td>In Progress</td>
+          <td>Web Development</td>
+          <td>
+            <button class="btn assign-btn">Assign Agent</button>
+          </td>
+        </tr>
+        <tr>
+          <td>#0014</td>
+          <td>Sachin Patel</td>
+          <td>Software installation error</td>
+          <td>Resolved</td>
+          <td>Software Support</td>
+          <td>
+            <button class="btn assign-btn">Assign Agent</button>
+          </td>
+        </tr>
+        <tr>
+          <td>#0015</td>
+          <td>Manisha Roy</td>
+          <td>System overheating frequently</td>
+          <td>Open</td>
+          <td>PC Repair</td>
+          <td>
+            <button class="btn assign-btn">Assign Agent</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    © 2025 FixIt Local · Admin Panel
+  </footer>
+</body>
+</html>

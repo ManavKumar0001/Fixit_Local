@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agent Dashboard - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0b0f16, #121c24);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(20, 30, 40, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 12px #00ffcc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00ffcc;
+    }
+
+    .dashboard {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #00ffcc;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 204, 0.15);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #00ffcc;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffcc;
+      border-radius: 15px;
+      padding: 1.5rem 2rem;
+      min-width: 240px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+      transition: 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+    }
+
+    .card h3 {
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #00ffcc;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .back-button {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: #00e6b8;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FixIt Local - Agent Dashboard</h1>
+    <a href="Home_Page.html" class="back-button">← Back to Home</a>
+  </header>
+
+<!-- My Tickets -->
+<div class="card" onclick="window.location.href='Agent_Mytickets.html'">
+  <h3>My Tickets</h3>
+  <p>View and resolve assigned user queries.</p>
+</div>
+
+<!-- Profile -->
+<div class="card" onclick="window.location.href='Agent_profile.html'">
+  <h3>Profile</h3>
+  <p>Update contact information and preferences.</p>
+</div>
+
+<!-- Notifications -->
+<div class="card" onclick="window.location.href='Agent_Notifications.html'">
+  <h3>Notifications</h3>
+  <p>Stay updated on support requests.</p>
+</div>
+
+
+  <footer>
+    © 2025 FixIt Local · QuickDesk Agent Panel
+  </footer>
+</body>
+</html>

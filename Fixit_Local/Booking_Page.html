@@ -1,0 +1,248 @@
+<!-- Updated: Vendor-booking-codecraft.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book CodeCraft Studio - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f0c29, #000000, #1c1c1c);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      color: #00f7ff;
+    }
+    .header p {
+      color: #ccc;
+    }
+    .vendor-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 180, 0.2);
+      margin-bottom: 40px;
+    }
+    .vendor-pic {
+      flex: 0 0 150px;
+    }
+    .vendor-pic img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00ff88;
+    }
+    .vendor-info {
+      flex: 1;
+    }
+    .vendor-info h2 {
+      color: #00ff88;
+    }
+    .vendor-info p {
+      color: #aaa;
+    }
+    .vendor-tags {
+      margin-top: 10px;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(0, 255, 180, 0.1);
+      color: #00ff88;
+      padding: 5px 12px;
+      border-radius: 15px;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+    .service-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    .service-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 180, 0.3);
+    }
+    .service-box h4 {
+      color: #00f7ff;
+      margin-bottom: 10px;
+    }
+    .service-box p {
+      color: #ccc;
+      font-size: 14px;
+    }
+    .booking-form {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      margin-bottom: 40px;
+    }
+    .booking-form h3 {
+      color: #00f7ff;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 15px;
+    }
+    .btn {
+      background: #00ff88;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #00d172;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      color: #00f7ff;
+      margin: 40px 0 20px;
+      border-left: 4px solid #00ff88;
+      padding-left: 10px;
+    }
+    .live-chat-button {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 40px;
+      padding: 12px 30px;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 255, 180, 0.5);
+      transition: all 0.3s ease;
+    }
+    .live-chat-button:hover {
+      background: #00d172;
+      box-shadow: 0 0 25px rgba(0, 255, 180, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Book CodeCraft Studio</h1>
+      <p>Build your dream website with the most trusted local web developers</p>
+    </div>
+
+    <div class="vendor-card">
+      <div class="vendor-pic">
+        <img src="https://source.unsplash.com/150x150/?man,developer" alt="Vendor Profile" />
+      </div>
+      <div class="vendor-info">
+        <h2>CodeCraft Studio</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Pune | 4.5 ★ (212 reviews)</p>
+        <p>Experts in business website development, e-commerce, and portfolio designs. Fast delivery, SEO optimized, and mobile-friendly.</p>
+        <div class="vendor-tags">
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">UI/UX</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">Our Services</h3>
+    <div class="service-boxes">
+      <div class="service-box">
+        <h4>Business Website Development</h4>
+        <p>Professional websites tailored for local businesses to attract customers and showcase services. Includes responsive design, SEO, and lead forms.</p>
+      </div>
+      <div class="service-box">
+        <h4>E-Commerce Platform</h4>
+        <p>Launch your online store with secure payments, inventory management, and delivery tracking. Built using modern scalable technologies.</p>
+      </div>
+      <div class="service-box">
+        <h4>Portfolio Website</h4>
+        <p>Elegant, fast-loading personal portfolio sites for freelancers and creatives. Fully customizable with interactive design.</p>
+      </div>
+    </div>
+
+    <div class="booking-form">
+      <h3>Fill Booking Details</h3>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="example@mail.com" />
+      </div>
+      <div class="form-group">
+        <label>Select Service</label>
+        <select>
+          <option>Business Website</option>
+          <option>E-Commerce Platform</option>
+          <option>Landing Page</option>
+          <option>Portfolio Website</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" />
+      </div>
+      <div class="form-group">
+        <label>Time Slot</label>
+        <select>
+          <option>Morning (10am - 1pm)</option>
+          <option>Afternoon (1pm - 4pm)</option>
+          <option>Evening (4pm - 7pm)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Project Description</label>
+        <textarea rows="4" placeholder="Describe your requirements"></textarea>
+      </div>
+      <button class="btn">Confirm Booking</button>
+    </div>
+
+    <button class="live-chat-button">💬 Live Chat with Vendor</button>
+  </div>
+</body>
+</html>

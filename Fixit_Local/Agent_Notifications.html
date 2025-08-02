@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifications - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f111a, #1b1f2a);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(20, 30, 40, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 12px #8e2de2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #8e2de2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #8e2de2;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(142, 45, 226, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #8e2de2;
+      text-align: center;
+    }
+
+    .notification {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #8e2de2;
+      border-left: 4px solid #8e2de2;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      color: #fff;
+    }
+
+    .notification p {
+      margin: 0.5rem 0 0 0;
+    }
+
+    .btn {
+      display: block;
+      margin: 2rem auto 0;
+      background-color: #8e2de2;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #6f1bd1;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #8e2de2;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FixIt Local - Notifications</h1>
+    <a href="Agent_Dashboard.html" style="text-decoration: none;">
+      <button class="btn">← Back to Dashboard</button>
+    </a>
+  </header>
+
+  <div class="container">
+    <h2>Recent Notifications</h2>
+
+    <div class="notification">
+      <strong>New Ticket Assigned</strong>
+      <p>You’ve been assigned ticket #TK823 regarding “Printer not working”.</p>
+    </div>
+
+    <div class="notification">
+      <strong>Service Completed</strong>
+      <p>Your submitted ticket #TK799 has been marked as resolved by the user.</p>
+    </div>
+
+    <div class="notification">
+      <strong>Profile Update Reminder</strong>
+      <p>Please update your location and specialization to continue receiving nearby service requests.</p>
+    </div>
+
+    <div class="notification">
+      <strong>System Maintenance</strong>
+      <p>QuickDesk will be temporarily down from 2:00 AM – 3:00 AM for maintenance.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 FixIt Local · Agent Notifications
+  </footer>
+</body>
+</html>

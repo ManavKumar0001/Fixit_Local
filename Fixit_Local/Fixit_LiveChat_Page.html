@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixIt Local - Live Chat Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #000000, #1c1c1c);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00f7ff;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+    .chat-window {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 180, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+    }
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .message {
+      max-width: 70%;
+      padding: 12px 18px;
+      margin: 10px 0;
+      border-radius: 20px;
+      font-size: 15px;
+      line-height: 1.4;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .message.user {
+      background: rgba(0, 255, 136, 0.2);
+      color: #00ff88;
+      align-self: flex-end;
+      text-align: right;
+    }
+    .message.vendor {
+      background: rgba(0, 255, 255, 0.15);
+      border: 1px solid #00f7ff;
+      color: #fff;
+      align-self: flex-start;
+    }
+    .chat-input {
+      display: flex;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 14px;
+    }
+    .chat-input button {
+      padding: 12px 20px;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(0, 255, 180, 0.5);
+    }
+    .chat-input button:hover {
+      background: #00d172;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .info-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 4px solid #00ff88;
+      border-radius: 10px;
+      color: #ccc;
+      font-size: 14px;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #00f7ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #00ff88;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Live Chat Support</h1>
+    <p class="subtitle">Need help? Chat with our support team in real-time</p>
+
+    <div class="chat-window">
+      <div class="messages">
+        <div class="message vendor">Hi there! 👋 How can I assist you today?</div>
+        <div class="message user">Hi! I have a problem with my laptop's display.</div>
+        <div class="message vendor">I'm sorry to hear that. Can you tell me the issue in detail?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>Support Hours:</strong> 9:00 AM – 9:00 PM (All Days)<br>
+      <strong>Note:</strong> For emergency queries, call us at <span style="color: #00ff88;">+91-98765-43210</span> or drop an email at <span style="color: #00ff88;">support@fixitlocal.in</span>
+    </div>
+
+    <a href="javascript:history.back()" class="back-link">← Back to Previous Page</a>
+  </div>
+</body>
+</html>

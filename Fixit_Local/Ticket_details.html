@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Detail - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0e141b, #0a0f15);
+      color: #fff;
+      min-height: 100vh;
+      padding-bottom: 100px;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: rgba(15, 20, 30, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px #00eaff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00eaff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00eaff;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+    }
+
+    .ticket-info {
+      margin-bottom: 2rem;
+    }
+
+    .ticket-info h2 {
+      color: #00eaff;
+      margin-bottom: 0.5rem;
+    }
+
+    .ticket-info p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 0.3rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      background: #22ff99;
+      color: #000;
+      margin-top: 0.5rem;
+    }
+
+    .thread {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #00eaff;
+      border-radius: 15px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 1.2rem;
+    }
+
+    .message strong {
+      color: #22ff99;
+    }
+
+    .message .time {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .reply-box textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid #00eaff;
+      color: #fff;
+      resize: vertical;
+      font-size: 0.95rem;
+      min-height: 100px;
+      margin-bottom: 1rem;
+      outline: none;
+    }
+
+    .reply-box button {
+      background: #00eaff;
+      color: #000;
+      font-weight: bold;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px #00eaff;
+    }
+
+    .reply-box button:hover {
+      background: #00c8d6;
+      box-shadow: 0 0 25px #00eaff;
+    }
+
+    .status-update {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .status-update select {
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #00eaff;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid #00eaff;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Ticket Detail</h1>
+  </header>
+
+  <section class="container">
+    <div class="ticket-info">
+      <h2>Unable to Login After Reset</h2>
+      <p><strong>Category:</strong> Login Issue</p>
+      <p><strong>Created:</strong> Aug 2, 2025</p>
+      <span class="status-badge">In Progress</span>
+    </div>
+
+    <div class="thread">
+      <div class="message">
+        <strong>User:</strong> I reset my password but still can't log in.  
+        <div class="time">Aug 1, 9:00 PM</div>
+      </div>
+      <div class="message">
+        <strong>Agent:</strong> Can you try using a different browser or clearing cookies?  
+        <div class="time">Aug 1, 10:15 PM</div>
+      </div>
+      <div class="message">
+        <strong>User:</strong> Tried that, still no success.  
+        <div class="time">Aug 2, 9:05 AM</div>
+      </div>
+    </div>
+
+    <div class="reply-box">
+      <textarea placeholder="Write your reply..."></textarea>
+      <button type="submit">Send Reply</button>
+    </div>
+
+    <div class="status-update">
+      <label for="status">Change Status:</label>
+      <select id="status">
+        <option>Open</option>
+        <option selected>In Progress</option>
+        <option>Resolved</option>
+        <option>Closed</option>
+      </select>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 FixIt Local · Support Team Working for You
+  </footer>
+</body>
+</html>

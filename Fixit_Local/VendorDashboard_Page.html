@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard - FixIt Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0a171d, #152933, #203a43);
+            color: white;
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 40px 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #00f7ff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #ccc;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: rgba(0, 247, 255, 0.2);
+            color: #00f7ff;
+        }
+
+        .main {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+        }
+
+        .main-section {
+            margin-top: 60px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #00f7ff;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+        }
+
+        th {
+            background: rgba(0, 247, 255, 0.2);
+            color: #00f7ff;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        ul.notifications {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        ul.notifications li {
+            margin-bottom: 10px;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="particles"></canvas>
+    <div class="sidebar">
+        <h2>FixIt Local</h2>
+        <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#recent-bookings">Bookings</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#profile">Profile</a></li> <!-- ✅ New Profile Button -->
+        </ul>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h1>Welcome, Vendor!</h1>
+            <button style="padding: 10px 20px; background: #00f7ff; border: none; border-radius: 5px; color: #000; cursor: pointer;">Logout</button>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Total Bookings</h3>
+                <p>23</p>
+            </div>
+            <div class="card">
+                <h3>Pending Orders</h3>
+                <p>4</p>
+            </div>
+            <div class="card">
+                <h3>Completed Services</h3>
+                <p>19</p>
+            </div>
+        </div>
+
+        <div class="main-section" id="recent-bookings">
+            <h2>Recent Bookings</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Client Name</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ravi Kumar</td>
+                            <td>Laptop Repair</td>
+                            <td>1 Aug 2025</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Anjali Mehta</td>
+                            <td>Mobile Unlocking</td>
+                            <td>31 Jul 2025</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <h2>My Services Summary</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Laptop Repair</h3>
+                    <p>₹ 600 | 9 Bookings</p>
+                </div>
+                <div class="card">
+                    <h3>Mobile Unlocking</h3>
+                    <p>₹ 400 | 6 Bookings</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <h2>Notifications</h2>
+            <div class="card">
+                <ul class="notifications">
+                    <li>📌 New booking from <strong>Ravi Kumar</strong>.</li>
+                    <li>✅ Service “Mobile Unlocking” marked completed.</li>
+                    <li>⭐ You received a 5-star review.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-section" id="reviews">
+            <h2>Reviews</h2>
+            <div class="card">
+                <p>⭐️⭐️⭐️⭐️⭐️ - Excellent service, very prompt and professional!</p>
+                <p>⭐️⭐️⭐️⭐️ - Good support and fast resolution. Thanks!</p>
+            </div>
+        </div>
+
+        <div class="main-section" id="profile">
+            <h2>Your Profile</h2>
+            <div class="card">
+                <p><strong>Name:</strong> Vendor Name</p>
+                <p><strong>Email:</strong> vendor@example.com</p>
+                <p><strong>Phone:</strong> +91-9876543210</p>
+                <p><strong>Services Offered:</strong> Laptop Repair, Mobile Unlocking</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.querySelector(".particles");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray = [];
+        const numberOfParticles = 100;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = "#00f7ff";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particlesArray.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>

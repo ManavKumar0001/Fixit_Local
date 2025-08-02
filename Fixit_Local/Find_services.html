@@ -1,0 +1,181 @@
+<!-- File: browse-all-services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Services - FixIt Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(135deg, #0f0c29, #000000, #1c1c1c);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+    h1 {
+      color: #00f7ff;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #bbb;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .search-bar input, .search-bar select {
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: none;
+      min-width: 200px;
+    }
+    .category-section {
+      margin-top: 3rem;
+    }
+    .category-title {
+      color: #00f7ff;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      border-left: 4px solid #00ff88;
+      padding-left: 10px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 25px rgba(0, 255, 180, 0.3);
+    }
+    .card h3 { color: #00ff88; margin-bottom: 0.5rem; }
+    .card p { color: #ccc; margin: 0.3rem 0; }
+    .rating { color: #ffcc00; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.6rem 0; }
+    .tag {
+      background: rgba(0, 255, 180, 0.1);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #00ff88;
+    }
+    .btn {
+      background: #00ff88;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Explore All Services</h1>
+  <p class="subtitle">Find and book top-rated tech experts near you</p>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search Service..." />
+    <input type="text" placeholder="Location (e.g., Indore)" />
+    <select>
+      <option>Sort by</option>
+      <option>Top Rated</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="category-section">
+    <div class="category-title">PC/Laptop Repair</div>
+    <div class="service-grid">
+      <div class="card">
+        <h3>TechMaster Solutions</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Indore</p>
+        <div class="rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>From ₹499</p>
+        <div class="tags">
+          <span class="tag">OS Install</span>
+          <span class="tag">SSD Upgrade</span>
+        </div>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="category-title">Web Development</div>
+    <div class="service-grid">
+      <div class="card">
+        <h3>CodeCraft Studio</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Pune</p>
+        <div class="rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        </div>
+        <p>From ₹1999</p>
+        <div class="tags">
+          <span class="tag">Business Website</span>
+          <span class="tag">E-Commerce</span>
+        </div>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="category-title">Mobile Repair</div>
+    <div class="service-grid">
+      <div class="card">
+        <h3>QuickFix Mobiles</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+        <div class="rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        </div>
+        <p>From ₹299</p>
+        <div class="tags">
+          <span class="tag">Screen Repair</span>
+          <span class="tag">Battery Replacement</span>
+        </div>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="category-title">Home Tech Setup</div>
+    <div class="service-grid">
+      <div class="card">
+        <h3>HomeSmart Services</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Bengaluru</p>
+        <div class="rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <p>From ₹999</p>
+        <div class="tags">
+          <span class="tag">WiFi Setup</span>
+          <span class="tag">Smart TV</span>
+        </div>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+
+    <p style="text-align: center; color: #888; margin-top: 3rem; font-style: italic;">...and many more ...</p>
+  </div>
+</body>
+</html>
